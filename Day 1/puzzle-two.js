@@ -4,11 +4,7 @@ const getSimilarityScore = (listOne, listTwo) => {
   const listTwoDict = {};
 
   listTwo.forEach((item) => {
-    if (listTwoDict[item]) {
-      listTwoDict[item] += 1;
-    } else {
-      listTwoDict[item] = 1;
-    }
+    listTwoDict[item] ? (listTwoDict[item] += 1) : (listTwoDict[item] = 1);
   });
 
   return listOne.reduce(
