@@ -1,10 +1,6 @@
 import { firstList, secondList } from "./data.js";
 
 const getSimilarityScore = (listOne, listTwo) => {
-  // Sort second list
-  listTwo.sort((a, b) => a - b);
-
-  // Create dictionary of listTwo
   const listTwoDict = {};
 
   listTwo.forEach((item) => {
