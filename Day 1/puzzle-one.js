@@ -1,6 +1,6 @@
 import { firstList, secondList } from "./data.js";
 
-const getTotalDistancebetweenListItems = (listOne, listTwo) => {
+const getTotalDistanceBetweenListItems = (listOne, listTwo) => {
   listOne.sort((a, b) => a - b);
   listTwo.sort((a, b) => a - b);
 
@@ -13,13 +13,13 @@ const getTotalDistancebetweenListItems = (listOne, listTwo) => {
   return totalDistance;
 };
 
-const distance = getTotalDistancebetweenListItems(
+const distance = getTotalDistanceBetweenListItems(
   [3, 4, 2, 1, 3, 3],
   [4, 3, 5, 3, 9, 3]
 );
 
 console.log(distance);
 
-const result = getTotalDistancebetweenListItems(firstList, secondList);
+const result = getTotalDistanceBetweenListItems(firstList, secondList);
 
 console.log(result);
