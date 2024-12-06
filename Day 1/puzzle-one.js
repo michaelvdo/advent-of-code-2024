@@ -4,13 +4,10 @@ const getTotalDistanceBetweenListItems = (listOne, listTwo) => {
   listOne.sort((a, b) => a - b);
   listTwo.sort((a, b) => a - b);
 
-  let totalDistance = 0;
-
-  listOne.forEach((item, itemIndex) => {
-    totalDistance += Math.abs(item - listTwo[itemIndex]);
-  });
-
-  return totalDistance;
+  return listOne.reduce(
+    (acc, item, itemIndex) => (acc += Math.abs(item - listTwo[itemIndex])),
+    0
+  );
 };
 
 const distance = getTotalDistanceBetweenListItems(

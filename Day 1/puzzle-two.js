@@ -11,13 +11,10 @@ const getSimilarityScore = (listOne, listTwo) => {
     }
   });
 
-  let similarityScore = 0;
-
-  listOne.forEach((item) => {
-    similarityScore += listTwoDict[item] ? item * listTwoDict[item] : 0;
-  });
-
-  return similarityScore;
+  return listOne.reduce(
+    (acc, item) => (acc += listTwoDict[item] ? item * listTwoDict[item] : 0),
+    0
+  );
 };
 
 const computedSimilarity = getSimilarityScore(firstList, secondList);
