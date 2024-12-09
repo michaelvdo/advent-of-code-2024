@@ -27,6 +27,6 @@ const getSumOfMiddlePagesOfCorrectUpdates = (rules, updates) => {
 };
 
 // const sum = getSumOfMiddlePagesOfCorrectUpdates(testRules, testUpdates); // Expected output: 143
-const sum = getSumOfMiddlePagesOfCorrectUpdates(puzzleRules, puzzleUpdates); // Expected output: 143
+const sum = getSumOfMiddlePagesOfCorrectUpdates(puzzleRules, puzzleUpdates); // Expected output: 5248
 
 console.log(sum);
